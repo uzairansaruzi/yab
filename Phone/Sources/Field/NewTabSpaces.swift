@@ -185,6 +185,14 @@ struct SpacePagesCard: View {
         let w = min(Metrics.Column.barWidth - Metrics.Column.capsuleInset * 2, free - 2 * (12 + Metrics.touch + 24))
         return CGRect(x: sides.left + (free - w) / 2, y: capsuleTop + Metrics.NewTab.highest, width: w, height: Metrics.Column.barHeight)
     }
+    /// The whole screen's head buttons, Settings at the left and the computer
+    /// (or the dots) at the right, inside what the system reserves at the
+    /// sides: an iPhone Duo's status column takes every touch on it. All Tabs,
+    /// the empty home and the spaces stand them in the same places.
+    static func headButton(right: Bool, width: CGFloat, sides: ChromeGeometry.Sides) -> CGRect {
+        let x = right ? width - sides.right - Metrics.NewTab.inset - Metrics.touch : sides.left + Metrics.NewTab.inset
+        return CGRect(x: x, y: capsuleTop + Metrics.NewTab.highest, width: Metrics.touch, height: Metrics.touch)
+    }
     /// Where a whole screen's page starts, under the capsule.
     static var restHead: CGFloat { capsuleTop + Metrics.NewTab.highest + Metrics.Column.barHeight + 6 }
     /// One content edge for everything in the card, 24 in from its sides: the
@@ -245,7 +253,8 @@ struct SpacePagesCard: View {
                         .opacity(Double(1 - app.field.sidebarBlur))
                 }
                 .buttonStyle(.plain)
-                .padding(.horizontal, Metrics.NewTab.inset)
+                .padding(.leading, Metrics.NewTab.inset + reserved.left)
+                .padding(.trailing, Metrics.NewTab.inset + reserved.right)
                 .padding(.top, capsuleTopNow)
             } else if showsCapsule {
                 // Search results replace the rows, not the space selector.

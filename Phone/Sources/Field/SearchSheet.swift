@@ -375,7 +375,7 @@ struct SpacesFootBar: View {
                     app.field.putKeyboardAway()
                     pager.jump = pages[i]
                 } sheetDrag: { _, _, _ in } about: {} settings: {}
-                .position(x: size.width / 2, y: layout.plus.midY)
+                .position(x: SpacesFootBar.capsuleMidX(layout), y: layout.plus.midY)
             } else {
             // One glass in each place; only its glyph turns, through a blur, as the page does.
             button(layout.chats, Circle(), id: chats ? "spaces.newChat" : "newtab.settings", label: chats ? "New Chat" : "Settings",
@@ -427,6 +427,12 @@ struct SpacesFootBar: View {
     /// The capsule's room between + and Done, in the spaces' foot and All Tabs' alike.
     static func capsuleWidth(_ layout: TabGalleryLayout) -> CGFloat {
         layout.gear.minX - layout.chats.maxX - 2 * Metrics.NewTab.spacePickerControlGap
+    }
+
+    /// The middle of that room, not the screen's: a status column on one side
+    /// moves Done in and the screen's middle would put the capsule under it.
+    static func capsuleMidX(_ layout: TabGalleryLayout) -> CGFloat {
+        (layout.chats.maxX + layout.gear.minX) / 2
     }
 
     private func button<S: Shape, Label: View>(_ rect: CGRect, _ shape: S, id: String, label: String, action: @escaping () -> Void,
