@@ -1,0 +1,22 @@
+page.1 window.occlusions: ["399.6666666666667,29.333333333333332 37.0x37.0", "382.0,0.0 84.0x174.0"]
+page.1 window.divisions: []
+page.1 window.verticalBarEdge: UIVerticalBarEdge(rawValue: 2)
+page.1 window.statusBarFrame: 0.0,0.0 466.0x2.0
+page.1 rail.layout.back: 400.0,176.0 48.0x48.0 sidebar: 400.0,236.0 48.0x48.0
+page.1 rail.element.chrome.back: 400.0,172.0 48.0x48.0
+page.1 window.bounds: 0.0,0.0 466.0x678.0
+page.1 window.safeArea: t0.0 l0.0 b34.0 r84.0
+page.1 chrome.sides: left 0.0 right 84.0
+settings.1 rail.layout.back: 400.0,176.0 48.0x48.0 sidebar: 400.0,236.0 48.0x48.0
+window (0.0, 0.0, 466.0, 678.0)
+settings.close exists=true frame=(12.0, 4.0, 44.0, 44.0)
+settings.title exists=true frame=(199.66666666666666, 15.666666666666666, 66.99999999999997, 21.0)
+settings.search exists=true frame=(16.0, 60.0, 434.0, 44.0)
+settings.row.general exists=true frame=(16.0, 124.0, 434.0, 50.0)
+settings.row.search exists=true frame=(16.0, 174.0, 434.0, 50.0)
+settings.back exists=true frame=(12.0, 4.0, 44.0, 44.0)
+settings.close exists=false frame=(0.0, 0.0, 0.0, 0.0)
+settings.page.title exists=true frame=(16.0, 52.0, 434.0, 117.0)
+after back: row.general exists=true
+settings.close exists=true frame=(12.0, 4.0, 44.0, 44.0)
+closed by settings.close: true
