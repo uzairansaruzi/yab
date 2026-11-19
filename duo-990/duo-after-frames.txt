@@ -9,14 +9,14 @@ page.1 window.safeArea: t0.0 l0.0 b34.0 r84.0
 page.1 chrome.sides: left 0.0 right 84.0
 settings.1 rail.layout.back: 400.0,176.0 48.0x48.0 sidebar: 400.0,236.0 48.0x48.0
 window (0.0, 0.0, 466.0, 678.0)
-settings.close exists=true frame=(400.0, 172.0, 48.0, 48.0)
+settings.close exists=true frame=(400.0, 176.0, 48.0, 48.0)
 settings.title exists=true frame=(157.66666666666666, 15.666666666666666, 67.0, 21.0)
 settings.search exists=true frame=(16.0, 60.0, 350.0, 44.0)
 settings.row.general exists=true frame=(16.0, 124.0, 350.0, 50.0)
 settings.row.search exists=true frame=(16.0, 174.0, 350.0, 50.0)
-settings.back exists=true frame=(400.0, 172.0, 48.0, 48.0)
+settings.back exists=true frame=(400.0, 176.0, 48.0, 48.0)
 settings.close exists=false frame=(0.0, 0.0, 0.0, 0.0)
 settings.page.title exists=true frame=(16.0, 52.0, 350.0, 117.0)
 after back: row.general exists=true
-settings.close exists=true frame=(400.0, 172.0, 48.0, 48.0)
+settings.close exists=true frame=(400.0, 176.0, 48.0, 48.0)
 closed by settings.close: true
